@@ -4,6 +4,7 @@ import compression from 'compression';
 import hpp from 'hpp';
 import { xssSanitize } from './xssSanitize.js';
 import defaultLimiter from './rateLimit.js';
+import cors from 'cors'
 
 export const applySecurity = (app) => {
     app.use(cors());               // Enable Cross-Origin Resource Sharing for all origins

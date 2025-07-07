@@ -33,9 +33,6 @@ export const initApp = (app, express) => {
         })
     })
 
-    const twoMinutesLater = new Date(Date.now() + 2 * 60 * 1000);
-    console.log(twoMinutesLater.toISOString());
-
     app.use('/api/v1/users', userRouter)
     app.use('/api/v1/tags', tagRouter)
     app.use('/api/v1/todo', todoRouter) // ← includes nested reminders

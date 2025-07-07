@@ -3,7 +3,7 @@ import sendEmail from "../../utils/sendEmail.js";
 
 export default function defineReminderJob(agenda) {
     agenda.define('check due todos', async (job) => {
-        console.log('🔁 Checking due todos at', new Date().toLocaleString());
+        // console.log('🔁 Checking due todos at', new Date().toLocaleString());
         const now = new Date();
         const todos = await Todo.find({
             dueDate: { $gte: now },
