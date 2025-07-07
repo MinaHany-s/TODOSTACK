@@ -37,6 +37,10 @@ const todoSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Tag',
     },
+    reminder: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Reminder',
+    },
     reminderSent: {
         type: Boolean,
         default: false,
